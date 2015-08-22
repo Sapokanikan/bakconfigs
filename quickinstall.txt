@@ -1,0 +1,111 @@
+# Personal quick installation quide
+
+
+# Check your partitions
+lsblk
+
+# Check if you are in uefi
+efivar -l
+
+# Activate wifi
+wifi-menu
+
+#(Optional) Format
+gdisk /dev/sdaX
+x
+z
+yes
+yes
+
+# Partitioning
+lsblk
+cgdisk /dev/sda
+
+# Making partitions (Default for first sector)
+512MiB	#Boot size
+ef00	#Hex code
+boot	#Name
+
+4GiB	#Swap size
+8200	#Hex code
+swap	#Name
+
+20GiB	#Root size
+default	#Hex code (8300)
+root	#name
+
+default	#Home size
+default	#Hex code (8300)
+home	#Name
+
+exit
+lsblk	#Check new partitions
+
+# Choose mirrors # Move mirrors you like to top
+nano /etc/pacman.d/mirrorlist
+http://mirror.us.leaseweb.net/archlinux/
+http://mirror.es.its.nyu.edu/archlinux/
+http://mirror.umd.edu/archlinux/
+http://mirror.jmu.edu/pub/archlinux/
+
+# Pacstrap
+pacstrap /mnt base base-devel
+
+# Gen fstab
+genfstab -U -p /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab	#Manually verify 
+
+# Change Root into system
+arch-chroot /mnt
+
+# Set Locale
+nano /etc/locale.gen
+en_US.UTF-8 UTF-8				#Uncomment
+locale-gen					#Generate
+echo LANG=en_US.UTF-8 > /etc/locale.conf	#Set the locale
+
+# Time Settings
+ln -sf /usr/share/zoneinfo/zone/subzone /etc/localtime	#Replace zone and subzone
+hwclock --systohc --utc	#Hardware clock
+
+# Hostname
+echo myhostname > /etc/hostname
+
+# Set passwd
+passwd
+
+# Edit pacman.conf
+nano /etc/pacman.conf
+multilib		#Uncomment the multilib repo
+
+#(Optional) pacman-keys
+(Possibly run 'pacman-keys --init' and 'pacman-keys --populate archlinux)
+(The reason this is optional is because I am unsure if this should be done. In pacman.conf, it says to run both before using pacman, but i haven't found anything in wiki that says to do so during install)
+
+# Set up wireless
+pacman -S iw wpa_supplicant dialog wpa_actiond
+ip-link
+systemctl enable netctl-auto@interface_name.service
+
+# Setup Bootloader
+pacman -S dosfstools intel-ucode
+bootctl --path=/boot install
+
+nano boot/loader/entries/arch.conf
+
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /intel-ucode.img
+initrd  /initramfs-linux.img
+options root=/dev/sda3 rw
+
+nano boot/loader/loader.conf
+
+timeout 3
+default arch
+
+# Finish
+exit
+umount -R /mnt
+poweroff or reboot
+
