@@ -31,7 +31,9 @@ archey3
 htop
 screenfetch
 wget
-cmus
+mpd
+mpc
+ncmpcpp
 numix
 git
 ttf-droid
