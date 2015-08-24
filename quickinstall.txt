@@ -41,6 +41,19 @@ home	#Name
 exit
 lsblk	#Check new partitions
 
+# mkfs and mount
+mkfs.vfat -F32 /dev/sda1
+mkswap /dev/sda2
+swapon /dev/sda2
+mkfs.ext4 /dev/sda3
+mkfs.ext4 /dev/sda4
+
+mount /dev/sda3 /mnt
+mkdir /mnt/boot
+mkdir /mnt/home
+mount /dev/sda1 /mnt/boot
+mount /dev/sda4 /mnt/home
+
 # Choose mirrors # Move mirrors you like to top
 nano /etc/pacman.d/mirrorlist
 http://mirror.us.leaseweb.net/archlinux/
@@ -109,3 +122,4 @@ exit
 umount -R /mnt
 poweroff or reboot
 
+useradd -m -G wheel -s /bin/bash name
