@@ -1,0 +1,79 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Music Player Daemon
+[mpd]
+label=
+command=~/.config/i3blocks/scripts/mpd
+color=#3aaccc
+interval=1
+
+# Volume indicator
+[volume]
+label=
+instance=Master
+color=#3aaccc
+interval=1
+signal=10
+
+# Home Disk Space
+[disk]
+label=
+color=#3aaccc
+#instance=/mnt/data
+interval=30
+
+# Wi-Fi
+[wifi]
+label=
+instance=yourwifihere
+command=~/.config/i3blocks/scripts/wifi
+interval=10
+separator=true
+
+# Battery Indicator
+[battery]
+label=
+color=#3aaccc
+#instance=1
+interval=30
+
+# Time
+[time]
+command=date '+%H:%M:%S'
+color=#3aaccc
+interval=1
+
+# Date
+[date]
+command=date '+%Y-%m-%d'
+color=#3aaccc
+interval=30
+
