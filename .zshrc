@@ -2,8 +2,12 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-monokai.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # This will set the prompt
-prompt walters
+prompt walters  
 
 # Arrow key style
 zstyle ':completion:*' menu select
@@ -21,10 +25,6 @@ bindkey -v
 
 # Freeze or unfreeze terminal
 ttyctl -f
-
-# Only past commands beginning with current input will be shown
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 DIRSTACKFILE="$HOME/.cache/zsh/dirs"
 if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
@@ -52,4 +52,4 @@ alias pacrem="sudo pacman -Rns"     # Remove the specified package(s), its confi
 alias paclo="pacman -Qdt"           # List all packages which are orphaned
 alias pacc="sudo pacman -Scc"       # Clean cache - delete all the package files in the cache
 alias screenlock="~/bin/screenlock.sh"
-
+alias v="vim"
