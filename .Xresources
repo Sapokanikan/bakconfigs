@@ -4,24 +4,25 @@ URxvt.underlineURLs: true
 URxvt.font: xft:Inconsolata for Powerline:pixelsize=16:antialias=true:hinting=true
 
 
-! Base16 Monokai
-! Scheme: Wimer Hazenberg (http://www.monokai.nl)
-#define base00 #272822
-#define base01 #383830
-#define base02 #49483e
-#define base03 #75715e
-#define base04 #a59f85
-#define base05 #f8f8f2
-#define base06 #f5f4f1
-#define base07 #f9f8f5
-#define base08 #f92672
-#define base09 #fd971f
-#define base0A #f4bf75
-#define base0B #a6e22e
-#define base0C #a1efe4
-#define base0D #66d9ef
-#define base0E #ae81ff
-#define base0F #cc6633
+! Base16 Atelier Lakeside
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/)
+
+#define base00 #161b1d
+#define base01 #1f292e
+#define base02 #516d7b
+#define base03 #5a7b8c
+#define base04 #7195a8
+#define base05 #7ea2b4
+#define base06 #c1e4f6
+#define base07 #ebf8ff
+#define base08 #d22d72
+#define base09 #935c25
+#define base0A #8a8a0f
+#define base0B #568c3b
+#define base0C #2d8f6f
+#define base0D #257fad
+#define base0E #5d5db1
+#define base0F #b72dd2
 
 *.foreground:   base05
 *.background:   base00
