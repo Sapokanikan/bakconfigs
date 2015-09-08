@@ -28,4 +28,4 @@ Plugin 'chriskempson/base16-vim'
 call vundle#end()
 filetype plugin indent on    " required
 
-colorscheme base16-monokai
+colorscheme base16-atelierlakeside

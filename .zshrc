@@ -3,7 +3,7 @@ compinit
 promptinit
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-monokai.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierlakeside.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # This will set the prompt
