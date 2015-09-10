@@ -1,6 +1,3 @@
-let g:airline_powerline_fonts=1
-let g:airline_theme='base16'
-let g:airline#extensions#tabline#enabled = 1
 let base16colorspace=256  " Access colors present in 256 colorspace
 
 syntax on
@@ -23,9 +20,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 call vundle#end()
 filetype plugin indent on    " required
 
-colorscheme base16-atelierlakeside
+colorscheme base16-eighties
