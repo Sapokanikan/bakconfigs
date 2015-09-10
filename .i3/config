@@ -4,14 +4,13 @@
 
 set $mod Mod4
 
-set $ws1 "1:"
+set $ws1 "1:"
 set $ws2 "2:"
+set $ws3 "3:"
 set $ws6 "6:"
 
 # Fonts
-font pango:Inconsolata for Powerline Regular 10
-font pango:monospace 8
-font pango:DejaVu Sans Mono 10 
+font pango:DejaVu Sans Mono 10
 
 # Gaps
 set $default_gaps_inner 15
@@ -87,7 +86,7 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace 3
+bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace $ws6
@@ -99,7 +98,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace $ws6
@@ -133,7 +132,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="(?i)firefox"]			$ws1
+assign [class="(?i)firefox"]			$ws3
 assign [class="(?i)thunderbird"]		$ws6
 
 # I3bar
@@ -141,11 +140,11 @@ bar {
         status_command i3blocks
 	position 		top
 	workspace_buttons	yes
-        font pango:Dejavu Sans Mono, Icons 10
+        font pango:DejaVu Sans Mono, Icons 10
 	strip_workspace_numbers yes
-	colors {
-	     background #021b21
-	}
+	#colors {
+	    #background #021b21
+	#}
 }
 
 # Floating apps

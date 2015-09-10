@@ -32,21 +32,18 @@ markup=none
 [mpd]
 label=
 command=~/.config/i3blocks/scripts/mpd
-color=#3aaccc
 interval=1
 
 # Volume indicator
 [volume]
 label=
 instance=Master
-color=#3aaccc
 interval=1
 signal=10
 
 # Home Disk Space
 [disk]
 label=
-color=#3aaccc
 #instance=/mnt/data
 interval=30
 
@@ -61,19 +58,15 @@ separator=true
 # Battery Indicator
 [battery]
 label=
-color=#3aaccc
 #instance=1
 interval=30
 
-# Time
-[time]
-command=date '+%H:%M:%S'
-color=#3aaccc
-interval=1
-
 # Date
 [date]
-command=date '+%Y-%m-%d'
-color=#3aaccc
-interval=30
+command=date +%a\ %b\ %d\ %H:%M
+interval=5
 
+# Firefox
+[firefox]
+full_text=
+command=~/.config/i3blocks/scripts/foxlaunch
