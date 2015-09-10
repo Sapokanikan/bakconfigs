@@ -2,14 +2,12 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-atelierlakeside.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
-# This will set the prompt
 prompt walters  
 
-# Arrow key style
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 zstyle ':completion:*' menu select
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
@@ -22,9 +20,6 @@ setopt hist_ignore_space
 setopt autocd
 
 bindkey -v
-
-# Freeze or unfreeze terminal
-ttyctl -f
 
 DIRSTACKFILE="$HOME/.cache/zsh/dirs"
 if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
