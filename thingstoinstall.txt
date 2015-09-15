@@ -23,7 +23,7 @@ w3m
 weechat
 firefox 
 thunderbird 
-alsa-utils              #Use the asound.conf provided in the repo. Follow solution linked here - https://bbs.archlinux.org/viewtopic.php?id=199907         
+alsa-utils                      
 xf86-input-synaptics
 lxappearance
 p7zip
@@ -46,3 +46,10 @@ scrot
 imagemagick
 gtkpod
 
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+
+nano /etc/asound.conf
+defaults.pcm.card 1
+defaults.pcm.device 0
+defaults.ctl.card 1
+nano /usr/share/alsa/alsa.conf
