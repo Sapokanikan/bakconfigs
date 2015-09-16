@@ -50,7 +50,7 @@ interval=30
 # Wi-Fi
 [wifi]
 label=
-instance=yourwifihere
+instance=wifi
 command=~/.config/i3blocks/scripts/wifi
 interval=10
 separator=true
@@ -65,6 +65,16 @@ interval=30
 [date]
 command=date +%a\ %b\ %d\ %H:%M
 interval=5
+
+# Proton
+[proton]
+full_text=
+command=~/.config/i3blocks/scripts/proton
+
+# Thunderbird
+[thunderbird]
+full_text=
+command=~/.config/i3blocks/scripts/birdlaunch
 
 # Firefox
 [firefox]

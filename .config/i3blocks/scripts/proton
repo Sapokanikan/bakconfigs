@@ -1,0 +1,4 @@
+#!/bin/bash
+
+firefox https://protonmail.ch/login </dev/null &>/dev/null &
+disown
