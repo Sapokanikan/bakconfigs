@@ -44,7 +44,9 @@ ttf-ubuntu
 ttf-freefont
 scrot
 imagemagick
-gtkpod
+picard
+usbmuxd
+gvfs-afc
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
@@ -53,3 +55,12 @@ defaults.pcm.card 1
 defaults.pcm.device 0
 defaults.ctl.card 1
 nano /usr/share/alsa/alsa.conf
+
+#Aur
+cower
+compton
+i3-gaps-git
+i3blocks
+ttf-font-awesome
+vundle-git
+xcb-util-cursor-git

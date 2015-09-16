@@ -124,4 +124,3 @@ poweroff or reboot
 
 useradd -m -G wheel -s /bin/bash name
 
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
