@@ -5,7 +5,7 @@ promptinit
 prompt walters  
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 zstyle ':completion:*' menu select
@@ -48,3 +48,4 @@ alias paclo="pacman -Qdt"           # List all packages which are orphaned
 alias pacc="sudo pacman -Scc"       # Clean cache - delete all the package files in the cache
 alias screenlock="~/bin/screenlock.sh"
 alias v="vim"
+alias rv="sudo rvim"
