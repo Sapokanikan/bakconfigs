@@ -34,9 +34,9 @@ swap	#Name
 default	#Hex code (8300)
 root	#name
 
-default	#Home size
-default	#Hex code (8300)
-home	#Name
+###default	#Home size
+###default	#Hex code (8300)
+###home	#Name
 
 exit
 lsblk	#Check new partitions
@@ -46,7 +46,7 @@ mkfs.vfat -F32 /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
 mkfs.ext4 /dev/sda3
-mkfs.ext4 /dev/sda4
+###mkfs.ext4 /dev/sda4
 
 mount /dev/sda3 /mnt
 mkdir /mnt/boot
@@ -91,10 +91,6 @@ passwd
 nano /etc/pacman.conf
 multilib		#Uncomment the multilib repo
 
-#(Optional) pacman-keys
-(Possibly run 'pacman-keys --init' and 'pacman-keys --populate archlinux)
-(The reason this is optional is because I am unsure if this should be done. In pacman.conf, it says to run both before using pacman, but i haven't found anything in wiki that says to do so during install)
-
 # Set up wireless
 pacman -S iw wpa_supplicant dialog wpa_actiond
 ip-link
@@ -123,4 +119,3 @@ umount -R /mnt
 poweroff or reboot
 
 useradd -m -G wheel -s /bin/bash name
-

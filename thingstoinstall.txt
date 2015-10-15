@@ -42,7 +42,6 @@ ttf-liberation
 ttf-freefont
 scrot
 imagemagick
-rhythmbox
 acpi
 xorg-xbacklight
 transmission
@@ -71,3 +70,6 @@ i3blocks
 ttf-font-awesome
 vundle-git
 xcb-util-cursor-git
+
+
+git base16-shell repo
