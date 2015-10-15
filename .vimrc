@@ -21,7 +21,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
+Bundle 'PotatoesMaster/i3-vim-syntax'
 call vundle#end()
 filetype plugin indent on    " required
 
-colorscheme base16-eighties
+colorscheme base16-ocean
