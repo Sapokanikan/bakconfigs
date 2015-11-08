@@ -1,5 +1,0 @@
-#!/bin/bash
-
-thunderbird </dev/null &>/dev/null &
-disown
-

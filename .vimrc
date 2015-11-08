@@ -20,9 +20,11 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'atelierbram/vim-colors_atelier-schemes'
 Plugin 'chriskempson/base16-vim'
 Bundle 'PotatoesMaster/i3-vim-syntax'
+Bundle 'hdima/python-syntax'
 call vundle#end()
 filetype plugin indent on    " required
 
-colorscheme base16-ocean
+colorscheme base16-ateliercave

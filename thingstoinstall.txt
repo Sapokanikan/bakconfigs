@@ -53,6 +53,10 @@ zsh-completion
 picard
 usbmuxd
 gvfs-afc
+zathura
+zathura-pdf-mupdf
+zathura-ps
+zathura-djvu
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 

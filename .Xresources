@@ -3,25 +3,25 @@ URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.font:  xft:Liberation Mono:size=11
 
-! Base16 Ocean
-! Scheme: Chris Kempson (http://chriskempson.com)
+! Base16 Atelier Cave
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/cave)
 
-#define base00 #2b303b
-#define base01 #343d46
-#define base02 #4f5b66
-#define base03 #65737e
-#define base04 #a7adba
-#define base05 #c0c5ce
-#define base06 #dfe1e8
-#define base07 #eff1f5
-#define base08 #bf616a
-#define base09 #d08770
-#define base0A #ebcb8b
-#define base0B #a3be8c
-#define base0C #96b5b4
-#define base0D #8fa1b3
-#define base0E #b48ead
-#define base0F #ab7967
+#define base00 #19171c
+#define base01 #26232a
+#define base02 #585260
+#define base03 #655f6d
+#define base04 #7e7887
+#define base05 #8b8792
+#define base06 #e2dfe7
+#define base07 #efecf4
+#define base08 #be4678
+#define base09 #aa573c
+#define base0A #a06e3b
+#define base0B #2a9292
+#define base0C #398bc6
+#define base0D #576ddb
+#define base0E #955ae7
+#define base0F #bf40bf
 
 *.foreground:   base05
 *.background:   base00

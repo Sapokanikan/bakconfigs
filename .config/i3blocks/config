@@ -48,12 +48,12 @@ label=
 interval=30
 
 # Wi-Fi
-[wifi]
-label=
-instance=wifi
-command=~/.config/i3blocks/scripts/wifi
-interval=10
-separator=true
+#[wifi]
+#label=
+#instance=
+#command=~/.config/i3blocks/scripts/wifi
+#interval=10
+#separator=true
 
 # Battery Indicator
 [battery]
@@ -65,3 +65,29 @@ interval=30
 [date]
 command=date +%a\ %b\ %d\ %H:%M
 interval=5
+
+# Youtube
+[youtube]
+full_text=
+command=~/.config/i3blocks/scripts/youtube.py
+
+# Proton
+[proton]
+full_text=
+command=~/.config/i3blocks/scripts/proton.py
+
+# Thunderbird
+#[thunderbird]
+#full_text=
+#command=~/.config/i3blocks/scripts/birdlaunch
+
+# Firefox
+[firefox]
+full_text=
+command=~/.config/i3blocks/scripts/foxlaunch.py
+
+# Office
+#[office]
+#full_text=
+#command=~/.config/i3blocks/scripts/office
+
