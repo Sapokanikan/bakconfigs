@@ -74,7 +74,9 @@ i3blocks
 ttf-font-awesome
 vundle-git
 xcb-util-cursor-git
-
+mpdscribble
+soulseekqt
+whatmp3
 
 git base16-shell repo
 
