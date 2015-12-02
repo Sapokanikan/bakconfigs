@@ -16,11 +16,12 @@ i3
 rxvt-unicode
 dmenu
 ranger
+thunar
 mpv
 youtube-dl 
 feh 
 w3m
-weechat
+weechat or hexchat
 firefox 
 thunderbird 
 alsa-utils                      
@@ -34,7 +35,7 @@ wget
 mpd
 mpc
 ncmpcpp
-numix
+#numix
 git
 ttf-inconsolata
 ttf-dejavu
@@ -53,10 +54,8 @@ zsh-completion
 picard
 usbmuxd
 gvfs-afc
-zathura
-zathura-pdf-mupdf
-zathura-ps
-zathura-djvu
+evince
+thunar additional
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
@@ -69,13 +68,11 @@ nano /usr/share/alsa/alsa.conf
 #Aur
 cower
 compton
-i3-gaps-git
+i3-gaps-git or vanilla
 i3blocks
 ttf-font-awesome
 vundle-git
-xcb-util-cursor-git
-mpdscribble
-soulseekqt
+#mpdscribble
 whatmp3
 
 git base16-shell repo

@@ -34,9 +34,9 @@ swap	#Name
 default	#Hex code (8300)
 root	#name
 
-###default	#Home size
-###default	#Hex code (8300)
-###home	#Name
+### default	#Home size
+### default	#Hex code (8300)
+### home	#Name
 
 exit
 lsblk	#Check new partitions
@@ -57,6 +57,7 @@ mount /dev/sda4 /mnt/home
 # Choose mirrors # Move mirrors you like to top
 nano /etc/pacman.d/mirrorlist
 http://mirror.us.leaseweb.net/archlinux/
+http://lug.mtu.edu/archlinux/
 http://mirror.es.its.nyu.edu/archlinux/
 http://mirror.umd.edu/archlinux/
 http://mirror.jmu.edu/pub/archlinux/
@@ -92,12 +93,11 @@ nano /etc/pacman.conf
 multilib		#Uncomment the multilib repo
 
 # Set up wireless
-pacman -S iw wpa_supplicant dialog wpa_actiond
+pacman -S iw wpa_supplicant dialog wpa_actiond dosfstools intel-ucode
 ip-link
 systemctl enable netctl-auto@interface_name.service
 
 # Setup Bootloader
-pacman -S dosfstools intel-ucode
 bootctl --path=/boot install
 
 nano boot/loader/entries/arch.conf
@@ -119,3 +119,5 @@ umount -R /mnt
 poweroff or reboot
 
 useradd -m -G wheel -s /bin/bash name
+visudo
+su
